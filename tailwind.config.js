@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 const plugin = require("tailwindcss/plugin");
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -7,6 +8,31 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        card: "#181818",
+        navbar: "#634023",
+        "card-hover": "#282828",
+        "bg-main": "#121212",
+        black: colors.black,
+        white: colors.white,
+        gray: colors.coolGray,
+        red: colors.red,
+        yellow: colors.amber,
+        green: colors.emerald,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        purple: colors.violet,
+        pink: colors.pink,
+      },
+      screens: {
+        sm: { min: "640px", max: "767px" },
+        md: { min: "768px", max: "1023px" },
+        lg: { min: "1024px", max: "1279px" },
+        xl: { min: "1280px", max: "1535px" },
+        "2xl": { min: "1536px" },
       },
     },
   },

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Spotify Clone using TailwindCSS</title>
+        <title>Spotify Clone using TailwindCSS - Web Player</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Layout>

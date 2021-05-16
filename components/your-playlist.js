@@ -1,53 +1,18 @@
 import { useState } from "react";
-import faker from "faker";
-const yourPlaylist = [
-  {
-    image: faker.image.technics(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.animals(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.cats(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.fashion(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.sports(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.transport(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.city(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.nature(),
-    title: faker.commerce.department(),
-  },
-  {
-    image: faker.image.avatar(),
-    title: faker.commerce.department(),
-  },
-];
-export default function YourPlaylist() {
+export default function YourPlaylist({ data }) {
   const [showPlay, setShowPlay] = useState(false);
   const [currentHover, setCurrentHover] = useState(0);
   return (
-    <div className="grid grid-cols-5 gap-4 my-4 mb-9">
-      {yourPlaylist.map((item, index) => {
+    <div className="grid grid-cols-3 2xl:grid-cols-5 gap-5 my-4 mb-9">
+      {data.map((item, index) => {
         return (
           <div
             key={index}
-            className="group flex items-center justify-between bg-gray-800 rounded-md hover:bg-gray-700"
+            className={
+              index > 5
+                ? "group hidden 2xl:flex items-center justify-between bg-card rounded-md hover:bg-card-hover"
+                : "group flex items-center justify-between bg-card rounded-md hover:bg-card-hover"
+            }
             onMouseOver={() => {
               setShowPlay(!showPlay);
               setCurrentHover(index);
@@ -58,8 +23,8 @@ export default function YourPlaylist() {
             }}
           >
             <a href="#">
-              <div className="flex items-center ">
-                <img className="w-20 h-20 rounded-md" src={item.image} />
+              <div className="flex items-center">
+                <img className="w-20 h-20 rounded-l-md" src={item.image} />
                 <span className="ml-4">{item.title}</span>
               </div>
             </a>
@@ -67,7 +32,7 @@ export default function YourPlaylist() {
               href="#"
               className={
                 currentHover === index && showPlay
-                  ? "mr-9 w-10 h-10 transform hover:-translate-y-0 hover:scale-110 rounded-full border-gray-200 bg-green-500 flex justify-center items-center shadow-lg"
+                  ? "w-10 h-10 transform hover:-translate-y-0 hover:scale-110 rounded-full border-gray-200 bg-green-500 flex justify-center items-center shadow-lg mr-4"
                   : "hidden"
               }
             >

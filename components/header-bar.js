@@ -2,9 +2,12 @@ import { useState } from "react";
 export default function HeaderBar() {
   const [openProfile, setOpenProfile] = useState(false);
   return (
-    <div className="flex items-center justify-between h-14 2xl:h-16 bg-gradient-to-b from-yellow-900 to-yellow-700 sticky top-0">
+    <div className="flex items-center justify-between h-14 2xl:h-16 bg-navbar fixed w-3/4 z-20">
       <div className="flex gap-4 ml-9">
-        <a href="#" className="text-white rounded-full bg-gray-800 p-1">
+        <a
+          href="#"
+          className="text-white rounded-full bg-gray-800 cursor-not-allowed p-1"
+        >
           <svg
             className="w-7 h-7 stroke-current"
             fill="none"

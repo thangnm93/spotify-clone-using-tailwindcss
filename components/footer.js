@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 right-0 left-0 bg-gray-900 h-24 2xl:h-26">
+    <footer className="fixed bottom-0 right-0 left-0 bg-card border-t border-gray-800 shadow-2xl h-24 2xl:h-26">
       <div className="p-2 2xl:p-4 flex justify-between">
         <div className="flex items-center text-gray-300 hover:text-white">
           <a href="#">
