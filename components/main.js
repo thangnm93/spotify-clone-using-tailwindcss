@@ -549,7 +549,7 @@ export default function Main() {
       <div className="overflow-y-auto scrollbar w-full h-screen text-gray-200">
         <div className="flex flex-col">
           <HeaderBar />
-          <div className="flex flex-col py-6 px-9 bg-gradient-to-b from-navbar to-gray-900 mt-14 2xl:mt-16">
+          <div className="flex flex-col py-6 px-9 bg-gradient-to-b from-navbar to-bg-main mt-14 2xl:mt-16">
             <h1 className="text-3xl font-semibold">Good evening</h1>
             <YourPlaylist data={getRenderData()} />
           </div>
@@ -601,6 +601,66 @@ export default function Main() {
             <MainSection
               title="More of what you like"
               description="Hear a little bit of everything you love."
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="Class of 2021"
+              description=""
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="Uniquely yours"
+              description=""
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="More like Martin Garrix"
+              description=""
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="Workout"
+              description="Music to keep you motivated."
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="Throwback"
+              description="Playlists full of favorites, still going strong."
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="More like ALPHA 9"
+              description=""
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="More like KSHMR"
+              description=""
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="More like Hardwell"
+              description=""
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="For today’s drive"
+              description="A mix of music and podcasts to get you through your commute."
+              url={{ href: "#", title: "SEE ALL" }}
+              data={getRenderData()}
+            />
+            <MainSection
+              title="Throwback party: 10s"
+              description=""
               url={{ href: "#", title: "SEE ALL" }}
               data={getRenderData()}
             />

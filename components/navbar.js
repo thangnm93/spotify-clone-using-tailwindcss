@@ -12,7 +12,7 @@ export default function Navbar() {
       </div>
       <div className="flex flex-col px-1">
         <div className="mb-4">
-          <div className="px-4 py-2 rounded-md m-1 bg-gray-800">
+          <div className="px-5 py-2 rounded-md m-1 bg-gray-800">
             <a
               href="#"
               className="flex flex-row font-medium text-sm items-center"
@@ -110,9 +110,9 @@ export default function Navbar() {
           </div>
         </div>
         <div className="mx-5 my-4 border-t border-gray-700"></div>
-        <div className="px-5 flex flex-col pb-4">
+        <div className="px-5 flex flex-col">
           <div className="w-full grid gap-2 overflow-hidden">
-            <div className="flex flex-col overflow-y-auto h-32 2xl:h-96 scrollbar gap-2">
+            <div className="flex flex-col overflow-y-auto h-36 2xl:h-96 scrollbar gap-2">
               <div className="flex justify-between text-sm text-gray-300 hover:text-white">
                 <a href="#">House</a>
                 <a href="#">
@@ -166,7 +166,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className="w-full mt-15 pt-1">
+          <div className="w-full">
             <div className="flex items-center text-sm text-gray-300 hover:text-white">
               <svg
                 className="w-6 h-6 stroke-current"

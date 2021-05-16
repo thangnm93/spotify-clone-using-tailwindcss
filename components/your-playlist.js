@@ -25,7 +25,7 @@ export default function YourPlaylist({ data }) {
             <a href="#">
               <div className="flex items-center">
                 <img className="w-20 h-20 rounded-l-md" src={item.image} />
-                <span className="ml-4">{item.title}</span>
+                <span className="ml-4 truncate w-32">{item.title}</span>
               </div>
             </a>
             <a

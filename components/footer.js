@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 right-0 left-0 bg-card border-t border-gray-800 shadow-2xl h-24 2xl:h-26">
+    <footer className="fixed bottom-0 right-0 left-0 bg-card border-t border-gray-800 shadow-2xl h-26 2xl:h-26">
       <div className="p-2 2xl:p-4 flex justify-between">
         <div className="flex items-center text-gray-300 hover:text-white">
           <a href="#">
@@ -29,6 +29,24 @@ export default function Footer() {
                   strokeLinejoin="round"
                   strokeWidth={1}
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div className="ml-2">
+            <a href="#" className="text-gray-300 hover:text-white">
+              <svg
+                className="w-5 h-5 stroke-current"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
                 />
               </svg>
             </a>
@@ -73,26 +91,20 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="transform hover:-translate-y-0 hover:scale-110 border rounded-full bg-white text-black"
+              className="flex items-center justify-center w-8 h-8 2xl:w-8 2xl:h-8 transform hover:-translate-y-0 hover:scale-110 border rounded-full bg-white text-black"
             >
               <svg
-                className="w-6 h-6 2xl:w-8 2xl:h-8 stroke-current"
-                fill="none"
-                viewBox="0 0 24 24"
+                className="w-4 h-4 stroke-current"
+                fill="currentColor"
+                viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+                  d="M4.018 14L14.41 8 4.018 2z"
+                ></path>
               </svg>
             </a>
             <a href="#" className="text-gray-300 hover:text-white">

@@ -8,9 +8,7 @@ export default function MainSection({ title, description, url, data }) {
         <div>
           <h1 className="text-xl font-semibold">{title}</h1>
           {description.length > 0 ? (
-            <p className="text-xs text-gray-300">
-              Podcasts we think you’ll get hooked on.
-            </p>
+            <p className="text-xs text-gray-300">{description}</p>
           ) : (
             ""
           )}
@@ -50,10 +48,10 @@ export default function MainSection({ title, description, url, data }) {
                     className="w-40 h-40 2xl:w-44 2xl:h-44 rounded-md"
                     src={item.image}
                   />
-                  <p className="truncate mt-4 text-white text-sm 2xl:text-md">
+                  <p className="truncate mt-4 text-white text-sm 2xl:text-md w-36">
                     {item.title}
                   </p>
-                  <p className="text-gray-400 text-xs 2xl:text-sm">
+                  <p className="text-gray-400 text-xs 2xl:text-sm mt-2 overflow-ellipsis overflow-hidden h-8">
                     {item.description}
                   </p>
                 </div>
