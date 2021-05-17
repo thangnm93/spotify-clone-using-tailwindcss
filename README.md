@@ -1,3 +1,7 @@
+## Demo
+
+On Netlify [https://nextjs-spotify-clone.netlify.app](https://nextjs-spotify-clone.netlify.app)
+
 ## Install
 
 ```bash
