@@ -1,7 +1,5 @@
 ## Install
 
-Run:
-
 ```bash
 npm install
 # or
