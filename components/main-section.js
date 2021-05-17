@@ -23,7 +23,7 @@ export default function MainSection({ title, description, url, data }) {
           )}
         </div>
       </div>
-      <div className="grid grid-cols-5 overflow-x-auto scrollbar 2xl:grid-cols-9 gap-4 my-4">
+      <div className="grid grid-cols-4 overflow-x-auto scrollbar md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6 5xl:grid-cols-8 gap-4 my-4">
         {data.map((item, index) => {
           return (
             <div
@@ -44,14 +44,16 @@ export default function MainSection({ title, description, url, data }) {
             >
               <a href="#" className="text-md">
                 <div className="flex flex-col">
-                  <img
-                    className="w-40 h-40 2xl:w-44 2xl:h-44 rounded-md"
-                    src={item.image}
-                  />
+                  <a href="#" className="flex justify-center">
+                    <img
+                      className="w-40 h-40 2xl:w-44 2xl:h-44 rounded-md"
+                      src={item.image}
+                    />
+                  </a>
                   <p className="truncate mt-4 text-white text-sm 2xl:text-md w-36">
                     {item.title}
                   </p>
-                  <p className="text-gray-400 text-xs 2xl:text-sm mt-2 overflow-ellipsis overflow-hidden h-8">
+                  <p className="text-gray-400 text-xs 2xl:text-sm mt-2 overflow-ellipsis overflow-hidden h-9">
                     {item.description}
                   </p>
                 </div>

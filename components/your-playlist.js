@@ -1,5 +1,10 @@
 import { useState } from "react";
-export default function YourPlaylist({ data }) {
+import { connect, useDispatch } from "react-redux";
+import * as Actions from "../redux/actions";
+import { getColorHoverBG } from "../redux/selectors";
+
+const YourPlaylist = ({ data }) => {
+  const dispatch = useDispatch();
   const [showPlay, setShowPlay] = useState(false);
   const [currentHover, setCurrentHover] = useState(0);
   return (
@@ -16,6 +21,7 @@ export default function YourPlaylist({ data }) {
             onMouseOver={() => {
               setShowPlay(!showPlay);
               setCurrentHover(index);
+              dispatch(Actions.setHoverColor(item.color));
             }}
             onMouseOut={() => {
               setShowPlay(false);
@@ -56,3 +62,8 @@ export default function YourPlaylist({ data }) {
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  const colorHoverBG = getColorHoverBG(state);
+  return { colorHoverBG };
+};
+export default connect(mapStateToProps)(YourPlaylist);

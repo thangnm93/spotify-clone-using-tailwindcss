@@ -1,12 +1,20 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 export default function HeaderBar() {
+  const colorHover = useSelector((state) => state.colorHoverBG.color);
   const [openProfile, setOpenProfile] = useState(false);
+  const styles = {
+    "background-color": colorHover ? colorHover : "rgba(99, 64, 35, var(--tw-bg-opacity))"
+  };
   return (
-    <div className="flex items-center justify-between h-14 2xl:h-16 bg-navbar fixed w-3/4 z-20">
+    <div
+      className="flex items-center justify-between h-14 2xl:h-16 bg-navbar fixed w-4/5 z-20"
+      style={styles}
+    >
       <div className="flex gap-4 ml-9">
         <a
           href="#"
-          className="text-white rounded-full bg-gray-800 cursor-not-allowed p-1"
+          className="text-white rounded-full bg-gray-800 cursor-not-allowed p-1 w-10 flex items-center justify-center"
         >
           <svg
             className="w-7 h-7 stroke-current"
@@ -22,7 +30,7 @@ export default function HeaderBar() {
             />
           </svg>
         </a>
-        <a href="#" className="text-white rounded-full bg-black p-1">
+        <a href="#" className="text-white rounded-full bg-black p-1 w-10 flex items-center justify-center">
           <svg
             className="w-7 h-7 stroke-current"
             fill="none"
@@ -37,6 +45,26 @@ export default function HeaderBar() {
             />
           </svg>
         </a>
+        <div className="relative hidden 2xl:block">
+          <div className="absolute text-black flex items-center px-4 h-full cursor-pointer">
+            <svg
+              className="w-6 h-6 stroke-current"
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+          <input
+            className="text-gray-600 focus:outline-none focus:border-none bg-white font-normal w-96 h-10 flex items-center pl-12 text-sm rounded-full" placeholder="Artists, songs, or podcasts"
+          />
+        </div>
       </div>
       <div className="mr-9">
         <div className="h-8 bg-gray-900 rounded-full border border-gray-900 px-1 relative">

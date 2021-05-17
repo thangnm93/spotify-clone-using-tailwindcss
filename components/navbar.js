@@ -109,11 +109,11 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-        <div className="mx-5 my-4 border-t border-gray-700"></div>
+        <div className="mx-6 my-3 border-t border-gray-700"></div>
         <div className="px-5 flex flex-col">
-          <div className="w-full grid gap-2 overflow-hidden">
-            <div className="flex flex-col overflow-y-auto h-36 2xl:h-96 scrollbar gap-2">
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+          <div className="w-full grid gap-2 p-1 overflow-hidden">
+            <div className="flex flex-col overflow-y-auto h-36 2xl:h-96 scrollbar gap-y-2">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">House</a>
                 <a href="#">
                   <svg
@@ -131,43 +131,43 @@ export default function Navbar() {
                   </svg>
                 </a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Future House</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Love House</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Trance</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Vina House</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Big</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">This Is Martin Garrix</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Motivation Mix</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Waiting</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Replay</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Thang NM</a>
               </div>
-              <div className="flex justify-between text-sm text-gray-300 hover:text-white">
+              <div className="flex justify-between text-xs text-gray-400 hover:text-white">
                 <a href="#">Some House</a>
               </div>
             </div>
           </div>
-          <div className="w-full">
-            <div className="flex items-center text-sm text-gray-300 hover:text-white">
+          <div className="max-w-max bg-black fixed bottom-32 2xl:bottom-36 -mb-5 2xl:-mb-5 py-1">
+            <div className="flex items-center text-xs text-gray-400 hover:text-white">
               <svg
                 className="w-6 h-6 stroke-current"
                 fill="none"

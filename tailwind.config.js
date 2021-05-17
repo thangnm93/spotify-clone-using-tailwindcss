@@ -27,6 +27,13 @@ module.exports = {
         purple: colors.violet,
         pink: colors.pink,
       },
+      screens: {
+        xs: "475px",
+        ...defaultTheme.screens,
+        "3xl": "1537px",
+        "4xl": "1841px",
+        "5xl": "2110px",
+      },
     },
   },
   variants: {

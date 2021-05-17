@@ -2,6 +2,7 @@ import HeaderBar from "./header-bar";
 import YourPlaylist from "./your-playlist";
 import MainSection from "./main-section";
 import faker from "faker";
+import { useSelector } from "react-redux";
 
 const dataImages = [
   "https://i.scdn.co/image/ab67616d00004851d7e333a4c32373b1fe797373",
@@ -203,7 +204,6 @@ const dataTitles = [
   "Tropical House",
   "The Party Hits of the 2010s",
   "CLASS OF 2021 mixtape",
-  "young &amp; free",
   "Lorem",
   "Soirée",
   "Teen Beats",
@@ -469,6 +469,103 @@ const dataDescriptions = [
   "Make your shower more uplifting by singing along to these hits.",
   "Pop hits to keep your workout fresh.",
 ];
+const dataMainSections = [
+  {
+    title: "Recently played",
+    description: "",
+    url: false,
+  },
+  {
+    title: "Shows to try",
+    description: "Podcasts we think you’ll get hooked on.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Made for you",
+    description: "Get better recommendations the more you listen.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "More like Mike Williams",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Best of artists",
+    description: "Bringing together the top songs from an artist.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Happy",
+    description: "Music that makes you feel good.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Class of 2021",
+    description: "Bringing together the top songs from an artist.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "More of what you like",
+    description: "Hear a little bit of everything you love.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Class of 2021",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Uniquely yours",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "More like Martin Garrix",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Workout",
+    description: "Music to keep you motivated.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Throwback",
+    description: "Playlists full of favorites, still going strong.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "More like ALPHA 9",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "More like KSHMR",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "More like Hardwell",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "For today’s drive",
+    description: "A mix of music and podcasts to get you through your commute.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Throwback party: 10s",
+    description: "",
+    url: { href: "#", title: "SEE ALL" },
+  },
+  {
+    title: "Sad",
+    description: "Music for dark days.",
+    url: { href: "#", title: "SEE ALL" },
+  },
+];
 
 function getRandomIndex() {
   const min = 0;
@@ -534,137 +631,42 @@ function getRenderData() {
       description: getDescription(),
       color: faker.internet.color(),
     },
-    {
-      image: dataImages[getRandomIndex()],
-      title: dataTitles[getRandomIndex()],
-      description: getDescription(),
-      color: faker.internet.color(),
-    },
   ];
 }
 
+
 export default function Main() {
+  const colorHover = useSelector((state) => state.colorHoverBG.color);
+  const styles = {
+    "background-image": `linear-gradient(to bottom, ${ colorHover ? colorHover : "var(--tw-gradient-from)" }, var(--tw-gradient-to))`,
+  };
   return (
     <>
       <div className="overflow-y-auto scrollbar w-full h-screen text-gray-200">
         <div className="flex flex-col">
           <HeaderBar />
-          <div className="flex flex-col py-6 px-9 bg-gradient-to-b from-navbar to-bg-main mt-14 2xl:mt-16">
+          <div
+            className="flex flex-col py-6 px-9 from-navbar to-bg-main mt-14 2xl:mt-16"
+            style={styles}
+          >
             <h1 className="text-3xl font-semibold">Good evening</h1>
             <YourPlaylist data={getRenderData()} />
           </div>
         </div>
-        <div className="bg-bg-main">
-          <div className="flex flex-col py-6 px-9 pb-28">
-            <MainSection
-              title="Recently played"
-              description=""
-              url={false}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Shows to try"
-              description="Podcasts we think you’ll get hooked on."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Made for you"
-              description="Get better recommendations the more you listen."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="More like Mike Williams"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Best of artists"
-              description="Bringing together the top songs from an artist."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Happy"
-              description="Music that makes you feel good."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Class of 2021"
-              description="Bringing together the top songs from an artist."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="More of what you like"
-              description="Hear a little bit of everything you love."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Class of 2021"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Uniquely yours"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="More like Martin Garrix"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Workout"
-              description="Music to keep you motivated."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Throwback"
-              description="Playlists full of favorites, still going strong."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="More like ALPHA 9"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="More like KSHMR"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="More like Hardwell"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="For today’s drive"
-              description="A mix of music and podcasts to get you through your commute."
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
-            <MainSection
-              title="Throwback party: 10s"
-              description=""
-              url={{ href: "#", title: "SEE ALL" }}
-              data={getRenderData()}
-            />
+        <div className="flex flex-row bg-bg-main">
+          <div className="w-5/6 flex flex-col py-6 px-9 pb-28">
+            {dataMainSections.map((section) => {
+              return (
+                <MainSection
+                  title={section.title}
+                  description={section.description}
+                  url={section.url}
+                  data={getRenderData()}
+                />
+              );
+            })}
           </div>
+          <div className="w-1/6"></div>
         </div>
       </div>
     </>

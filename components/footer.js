@@ -56,8 +56,7 @@ export default function Footer() {
           <div className="flex justify-center items-center gap-6 mb-3">
             <a
               href="#"
-              className="text-gray-300 hover:text-white"
-              className="text-green-500"
+              className="flex items-center justify-center text-green-500 hover:text-green-500 relative"
             >
               <svg
                 className="w-4 h-4 2xl:w-6 2xl:h-6 stroke-current"
@@ -72,7 +71,7 @@ export default function Footer() {
                   d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
                 />
               </svg>
-              <span className="border-t w-1 h-1 rounded-full text-green-500 bg-green-500"></span>
+              <span className="absolute w-1 h-1 -bottom-1 rounded-full focus:rounded-full text-green-500 bg-green-500"></span>
             </a>
             <a href="#" className="text-gray-300 hover:text-white">
               <svg
@@ -219,9 +218,8 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="flex justify-between items-center h-6 2xl:h-7 bg-green-400">
-        <p></p>
-        <p className="flex mr-4 text-sm font-light">
+      <div className="flex justify-end h-6 2xl:h-7 bg-green-400">
+        <p className="flex items-center mr-4 text-sm font-light">
           <svg
             className="w-4 h-4 2xl:w-6 2xl:h-6 stroke-current mr-2"
             fill="none"
