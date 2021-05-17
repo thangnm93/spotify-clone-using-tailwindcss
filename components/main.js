@@ -655,9 +655,10 @@ export default function Main() {
         </div>
         <div className="flex flex-row bg-bg-main">
           <div className="w-5/6 flex flex-col py-6 px-9 pb-28">
-            {dataMainSections.map((section) => {
+            {dataMainSections.map((section, index) => {
               return (
                 <MainSection
+                  key={index}
                   title={section.title}
                   description={section.description}
                   url={section.url}
