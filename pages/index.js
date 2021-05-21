@@ -14,10 +14,10 @@ export default function Home() {
       </Head>
       <Layout>
         <div className="flex">
-          <div className="h-screen bg-black w-1/5">
+          <div className="h-screen bg-black w-1/5 hidden md:block">
             <Navbar />
           </div>
-          <div className="w-4/5">
+          <div className="w-full md:w-4/5">
             <Main />
           </div>
           <Footer />

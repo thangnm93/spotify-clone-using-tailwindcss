@@ -6,16 +6,21 @@ export default function MainSection({ title, description, url, data }) {
     <div className="mb-5">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-xl font-semibold">{title}</h1>
+          <h1 className="text-sm md:text-xl font-semibold">{title}</h1>
           {description.length > 0 ? (
-            <p className="text-xs text-gray-300">{description}</p>
+            <p className="hidden md:block text-xs text-gray-300">
+              {description}
+            </p>
           ) : (
             ""
           )}
         </div>
         <div>
           {url ? (
-            <a className="text-xs font-semibold" href={url.href}>
+            <a
+              className="hidden md:block text-xs font-semibold"
+              href={url.href}
+            >
               {url.title}
             </a>
           ) : (
@@ -23,15 +28,15 @@ export default function MainSection({ title, description, url, data }) {
           )}
         </div>
       </div>
-      <div className="grid grid-cols-4 overflow-x-auto scrollbar md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6 5xl:grid-cols-8 gap-4 my-4">
+      <div className="flex flex-row space-x-2 md:grid scrollbar-transparent grid-cols-4 overflow-x-auto md:scrollbar md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6 5xl:grid-cols-8 md:gap-4 my-4">
         {data.map((item, index) => {
           return (
             <div
               key={index}
               className={
                 index > 4
-                  ? "group bg-card p-3 pb-6 hidden 2xl:flex rounded-md hover:bg-card-hover relative"
-                  : "group bg-card p-3 pb-6 flex rounded-md hover:bg-card-hover relative"
+                  ? "group md:bg-card md:p-3 md:pb-6 hidden 2xl:flex rounded-md md:hover:bg-card-hover relative"
+                  : "group md:bg-card md:p-3 md:pb-6 flex rounded-md md:hover:bg-card-hover relative"
               }
               onMouseOver={() => {
                 setShowPlay(!showPlay);
@@ -42,18 +47,18 @@ export default function MainSection({ title, description, url, data }) {
                 setCurrentHover(0);
               }}
             >
-              <a href="#" className="text-md">
+              <a href="#">
                 <div className="flex flex-col">
-                  <div className="flex justify-center">
+                  <div className="md:flex md:justify-center">
                     <img
-                      className="w-40 h-40 2xl:w-44 2xl:h-44 rounded-md"
+                      className="w-28 h-28 md:w-40 md:h-40 2xl:w-44 2xl:h-44 rounded-sm md:rounded-md"
                       src={item.image}
                     />
                   </div>
-                  <p className="truncate mt-4 text-white text-sm 2xl:text-md w-36">
+                  <p className="truncate text-center mt-2 md:mt-4 text-white text-xs md:text-sm 2xl:text-md w-28 md:w-36">
                     {item.title}
                   </p>
-                  <p className="text-gray-400 text-xs 2xl:text-sm mt-2 overflow-ellipsis overflow-hidden h-9">
+                  <p className="hidden md:block text-gray-400 text-xs 2xl:text-sm mt-2 overflow-ellipsis overflow-hidden h-9">
                     {item.description}
                   </p>
                 </div>

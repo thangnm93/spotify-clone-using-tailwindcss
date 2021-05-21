@@ -7,4 +7,8 @@
   .scrollbar {
     @apply scrollbar-w-2 scrollbar-track-gray-lighter scrollbar-thumb-rounded scrollbar-thumb-gray;
   }
+
+  .scrollbar-transparent {
+    @apply scrollbar-w-2 scrollbar-track-transparent scrollbar-thumb-rounded scrollbar-thumb-transparent;
+  }
 }

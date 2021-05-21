@@ -640,7 +640,7 @@ export default function Main() {
           <Header data={getRenderData()} />
         </div>
         <div className="flex flex-row bg-bg-main">
-          <div className="w-5/6 flex flex-col py-6 px-9 pb-28">
+          <div className="w-full md:w-5/6 flex flex-col py-6 px-4 md:px-9 pb-28">
             {dataMainSections.map((section, index) => {
               return (
                 <MainSection

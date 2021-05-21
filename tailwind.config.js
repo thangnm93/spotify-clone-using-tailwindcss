@@ -55,6 +55,12 @@ module.exports = {
         ".scrollbar-track-gray-lighter::-webkit-scrollbar-track": {
           backgroundColor: "rgba(209, 213, 219, 1) !important",
         },
+        ".scrollbar-thumb-transparent::-webkit-scrollbar-thumb": {
+          backgroundColor: "transparent",
+        },
+        ".scrollbar-track-transparent::-webkit-scrollbar-track": {
+          backgroundColor: "transparent",
+        },
       };
       addComponents(newComponents, {
         variants: ["responsive"],
