@@ -44,12 +44,12 @@ export default function MainSection({ title, description, url, data }) {
             >
               <a href="#" className="text-md">
                 <div className="flex flex-col">
-                  <a href="#" className="flex justify-center">
+                  <div className="flex justify-center">
                     <img
                       className="w-40 h-40 2xl:w-44 2xl:h-44 rounded-md"
                       src={item.image}
                     />
-                  </a>
+                  </div>
                   <p className="truncate mt-4 text-white text-sm 2xl:text-md w-36">
                     {item.title}
                   </p>

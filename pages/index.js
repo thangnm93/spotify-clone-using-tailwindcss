@@ -1,14 +1,13 @@
-import { Provider } from "react-redux";
 import Head from "next/head";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Main from "../components/main";
-import store from "../redux/store";
+import { RecoilRoot } from "recoil";
 
 export default function Home() {
   return (
-    <Provider store={store}>
+    <RecoilRoot>
       <Head>
         <title>Spotify Clone using TailwindCSS - Web Player</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -24,6 +23,6 @@ export default function Home() {
           <Footer />
         </div>
       </Layout>
-    </Provider>
+    </RecoilRoot>
   );
 }

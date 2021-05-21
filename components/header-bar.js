@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
-export default function HeaderBar() {
-  const colorHover = useSelector((state) => state.colorHoverBG.color);
+
+export default function HeaderBar({ hoverColor }) {
   const [openProfile, setOpenProfile] = useState(false);
   const styles = {
-    "background-color": colorHover ? colorHover : "rgba(99, 64, 35, var(--tw-bg-opacity))"
+    backgroundColor: hoverColor,
   };
   return (
     <div
@@ -30,7 +29,10 @@ export default function HeaderBar() {
             />
           </svg>
         </a>
-        <a href="#" className="text-white rounded-full bg-black p-1 w-10 flex items-center justify-center">
+        <a
+          href="#"
+          className="text-white rounded-full bg-black p-1 w-10 flex items-center justify-center"
+        >
           <svg
             className="w-7 h-7 stroke-current"
             fill="none"
@@ -62,7 +64,8 @@ export default function HeaderBar() {
             </svg>
           </div>
           <input
-            className="text-gray-600 focus:outline-none focus:border-none bg-white font-normal w-96 h-10 flex items-center pl-12 text-sm rounded-full" placeholder="Artists, songs, or podcasts"
+            className="text-gray-600 focus:outline-none focus:border-none bg-white font-normal w-96 h-10 flex items-center pl-12 text-sm rounded-full"
+            placeholder="Artists, songs, or podcasts"
           />
         </div>
       </div>

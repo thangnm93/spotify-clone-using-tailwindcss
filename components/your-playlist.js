@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { connect, useDispatch } from "react-redux";
-import * as Actions from "../redux/actions";
-import { getColorHoverBG } from "../redux/selectors";
+import { useRecoilState } from "recoil";
+import { headerColorHoverAtom } from "../recoil-state";
 
 const YourPlaylist = ({ data }) => {
-  const dispatch = useDispatch();
   const [showPlay, setShowPlay] = useState(false);
   const [currentHover, setCurrentHover] = useState(0);
+  const [hoverColor, setHoverColor] = useRecoilState(headerColorHoverAtom);
   return (
     <div className="grid grid-cols-3 2xl:grid-cols-5 gap-5 my-4 mb-9">
       {data.map((item, index) => {
@@ -21,7 +20,7 @@ const YourPlaylist = ({ data }) => {
             onMouseOver={() => {
               setShowPlay(!showPlay);
               setCurrentHover(index);
-              dispatch(Actions.setHoverColor(item.color));
+              setHoverColor(item.color);
             }}
             onMouseOut={() => {
               setShowPlay(false);
@@ -61,9 +60,5 @@ const YourPlaylist = ({ data }) => {
       })}
     </div>
   );
-}
-const mapStateToProps = (state) => {
-  const colorHoverBG = getColorHoverBG(state);
-  return { colorHoverBG };
 };
-export default connect(mapStateToProps)(YourPlaylist);
+export default YourPlaylist;

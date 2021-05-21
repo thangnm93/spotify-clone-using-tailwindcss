@@ -1,8 +1,6 @@
-import HeaderBar from "./header-bar";
-import YourPlaylist from "./your-playlist";
+import Header from "./header";
 import MainSection from "./main-section";
 import faker from "faker";
-import { useSelector } from "react-redux";
 
 const dataImages = [
   "https://i.scdn.co/image/ab67616d00004851d7e333a4c32373b1fe797373",
@@ -634,24 +632,12 @@ function getRenderData() {
   ];
 }
 
-
 export default function Main() {
-  const colorHover = useSelector((state) => state.colorHoverBG.color);
-  const styles = {
-    "background-image": `linear-gradient(to bottom, ${ colorHover ? colorHover : "var(--tw-gradient-from)" }, var(--tw-gradient-to))`,
-  };
   return (
     <>
       <div className="overflow-y-auto scrollbar w-full h-screen text-gray-200">
         <div className="flex flex-col">
-          <HeaderBar />
-          <div
-            className="flex flex-col py-6 px-9 from-navbar to-bg-main mt-14 2xl:mt-16"
-            style={styles}
-          >
-            <h1 className="text-3xl font-semibold">Good evening</h1>
-            <YourPlaylist data={getRenderData()} />
-          </div>
+          <Header data={getRenderData()} />
         </div>
         <div className="flex flex-row bg-bg-main">
           <div className="w-5/6 flex flex-col py-6 px-9 pb-28">
