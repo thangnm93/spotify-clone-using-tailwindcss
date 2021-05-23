@@ -653,7 +653,76 @@ export default function Main() {
               );
             })}
           </div>
-          <div className="w-1/6"></div>
+          <div className="w-1/6 pr-9 py-6">
+            <div className="flex items-center justify-between pb-9">
+              <span>Friend Activity</span>
+              <a href="#">
+                <svg
+                  className="w-9 h-9 stroke-current rounded-full hover:bg-gray-50 hover:bg-opacity-30 p-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1}
+                    d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div>
+              <div className="flex items-center mb-4">
+                <a href="#">
+                  <img
+                    className="w-full rounded-full border border-gray-700"
+                    src="https://images.unsplash.com/photo-1614548142166-160eed2f0777?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=60&q=80"
+                  />
+                </a>
+                <div className="flex flex-col w-full ml-3">
+                  <div className="flex flex-row justify-between mr-4">
+                    <span className="text-sm">Spotify User</span>
+                    <span className="text-xs text-gray-400">14 giờ</span>
+                  </div>
+                  <span className="text-xs text-gray-400">Your Playlist</span>
+                  <span className="text-xs text-gray-400">Album</span>
+                </div>
+              </div>
+              <div className="flex items-center mb-4">
+                <a href="#">
+                  <img
+                    className="w-full rounded-full border border-gray-700"
+                    src="https://images.unsplash.com/photo-1614548142166-160eed2f0777?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=60&q=80"
+                  />
+                </a>
+                <div className="flex flex-col w-full ml-3">
+                  <div className="flex flex-row justify-between mr-4">
+                    <span className="text-sm">Spotify User</span>
+                    <span className="text-xs text-gray-400">14 giờ</span>
+                  </div>
+                  <span className="text-xs text-gray-400">Your Playlist</span>
+                  <span className="text-xs text-gray-400">Album</span>
+                </div>
+              </div>
+              <div className="flex items-center mb-4">
+                <a href="#">
+                  <img
+                    className="w-full rounded-full border border-gray-700"
+                    src="https://images.unsplash.com/photo-1614548142166-160eed2f0777?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=60&q=80"
+                  />
+                </a>
+                <div className="flex flex-col w-full ml-3">
+                  <div className="flex flex-row justify-between mr-4">
+                    <span className="text-sm">Spotify User</span>
+                    <span className="text-xs text-gray-400">14 giờ</span>
+                  </div>
+                  <span className="text-xs text-gray-400">Your Playlist</span>
+                  <span className="text-xs text-gray-400">Album</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

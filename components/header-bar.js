@@ -70,7 +70,7 @@ export default function HeaderBar({ hoverColor }) {
         </div>
       </div>
       <div className="hidden md:block mr-9">
-        <div className="h-8 bg-gray-900 rounded-full border border-gray-900 px-1 relative">
+        <div className="h-8 bg-gray-900 bg-opacity-80 rounded-full border border-none px-1 relative">
           <a
             href="#"
             onClick={() => {

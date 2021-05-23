@@ -7,7 +7,7 @@ const YourPlaylist = ({ data }) => {
   const [currentHover, setCurrentHover] = useState(0);
   const [hoverColor, setHoverColor] = useRecoilState(headerColorHoverAtom);
   return (
-    <div className="flex flex-row space-x-2 overflow-x-auto scrollbar-transparent md:grid md:grid-cols-3 md:2xl:grid-cols-5 md:gap-5 my-4 md:mb-9">
+    <div className="flex flex-row space-x-2 overflow-x-auto scrollbar-transparent lg:grid lg:grid-cols-3 2xl:grid-cols-5 lg:gap-5 my-4 lg:mb-9">
       {data.map((item, index) => {
         return (
           <div
