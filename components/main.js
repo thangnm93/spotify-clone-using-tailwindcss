@@ -640,7 +640,7 @@ export default function Main() {
           <Header data={getRenderData()} />
         </div>
         <div className="flex flex-row bg-bg-main">
-          <div className="w-full md:w-5/6 flex flex-col py-6 px-4 md:px-9 pb-28">
+          <div className="w-full lg:w-5/6 flex flex-col py-6 px-4 lg:px-9 pb-28">
             {dataMainSections.map((section, index) => {
               return (
                 <MainSection
@@ -653,7 +653,7 @@ export default function Main() {
               );
             })}
           </div>
-          <div className="w-1/6 pr-9 py-6">
+          <div className="hidden lg:block lg:w-1/6 pr-9 py-6">
             <div className="flex items-center justify-between pb-9">
               <span>Friend Activity</span>
               <a href="#">
